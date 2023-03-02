@@ -1,0 +1,33 @@
+/* =============== CONTACTS-ITEM =============== */
+
+.contacts-item {
+	display: flex;
+	& + & {
+		margin: 44px 0 0 0;
+	}
+	&__icon {
+		flex: 0 1 60px;
+	}
+	&__title {
+		font-size: 14px;
+		color: var(--text-color-second);
+		margin: 0 0 8px 0;
+	}
+	&__text {
+		font-family: "Exo 2";
+		line-height: 1.2;
+	}
+
+	@media (max-width: 575px) {
+		& + & {
+			margin: 48px 0 0 0;
+		}
+		&__title {
+			font-size: 15px;
+			margin: 0 0 12px 0;
+		}
+		&__text {
+			font-size: 20px;
+		}
+	}
+}

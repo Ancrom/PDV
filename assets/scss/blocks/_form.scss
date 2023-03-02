@@ -1,0 +1,98 @@
+/* =============== FORM =============== */
+
+.form {
+	padding: 0 0 120px 0;
+	&__container {
+		background: calc(100% - 40px) 0 / contain url(./../img/form/form-bg.jpg) no-repeat;
+	}
+	&__title {
+		margin: 0 0 45px 0;
+	}
+	&__content {
+		background: var(--accent-color-main);
+		max-width: 700px;
+		padding: 57px;
+		line-height: 1.25;
+	}
+	&__body {
+		display: flex;
+		flex-flow: column;
+		color: var(--text-color-third);
+	}
+	&__textarea {
+		min-height: 223px;
+		color: inherit;
+		line-height: 44px;
+		margin: 0 0 40px 0;
+		resize: none;
+		overflow: hidden;
+		background-attachment: local;
+		background: repeating-linear-gradient(0, #3c918e, #3c918e 2px, var(--accent-color-main) 1px, var(--accent-color-main) 45px);
+		&::placeholder {
+			color: inherit;
+		}
+	}
+	&__file {
+		padding: 16px 16px 16px 37px;
+		background: 0 center / 20px url(./../img/form/file.svg) no-repeat;
+		border-bottom: 1px solid #ffffff33;
+		margin: 0 0 14px 0;
+	}
+	&__image {
+		margin: 0 0 62px 0;
+		padding: 16px 16px 16px 37px;
+		background: 0 center / 20px url(./../img/form/add.svg) no-repeat;
+		border-bottom: 1px solid #ffffff33;
+	}
+	&__button {
+		padding: 14px 35px;
+		align-self: flex-start;
+		border-radius: 4px;
+		background: #ffffff;
+		font-family: "Exo 2";
+		line-height: 1.5;
+		color: var(--accent-color-main);
+		transition: 0.2s ease-out;
+		border: 1px solid #ffffff;
+		text-align: center;
+		&:hover {
+			color: #ffffff;
+			background: var(--accent-color-main);
+			border: 1px solid #ffffff;
+			transition: 0.2s ease-out;
+		}
+	}
+
+	@media (max-width: 1050px) {
+		padding: 0 0 88px 0;
+		 &__container {
+			background: none;
+		 }
+		 &__content {
+			max-width: 100%;
+			padding: 56px 56px 48px;
+		 }
+	}
+
+	@media (max-width: 600px) {
+		padding: 0 0 64px 0;
+		&__content {
+			padding: 40px 16px 48px;
+		}
+		&__textarea {
+			min-height: 190px;
+			line-height: 37px;
+			background: repeating-linear-gradient(0, #3c918e, #3c918e 2px, var(--accent-color-main) 1px, var(--accent-color-main) 38px);
+		}
+		&__file {
+			font-size: 15px;
+		}
+		&__image {
+			font-size: 15px;
+			margin: 0 0 71px 0;
+		}
+		&__button {
+			align-self: stretch;
+		}
+	}
+}

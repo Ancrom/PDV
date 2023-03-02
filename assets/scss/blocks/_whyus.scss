@@ -1,0 +1,90 @@
+/* =============== WHYUS =============== */
+
+.whyus {
+	&__header {
+		display: flex;
+		padding: 160px 0 185px 0;
+		background: url(./../img/why-us/why-us-bg.jpg) calc(50% + 253px) 87% / 1040px no-repeat;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			background: rgba(11, 117, 114, 0.3019607843);
+			transform: skew(36deg, 0) translate(-42%, 0);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background: var(--accent-color-main);
+			transform: skew(36deg, 0) translate(-58%, 0);
+		}
+	}
+	&__title {
+		position: relative;
+		z-index: 2;
+	}
+	&__body {
+		padding: 72.5px 0 120px 0;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 60px 140px;
+	}
+
+	@media (max-width: 1320px) {
+		&__header {
+			margin: 0 -40px 0 0;
+		}
+	}
+
+	@media (max-width: 1020px) {
+		&__header {
+			padding: 130px 0 150px 0;
+			background: url(./../img/why-us/why-us-bg.jpg) calc(50% + 241px) 76%/1040px no-repeat;
+			&::before {
+				transform: skew(40deg, 0) translate(-34%, 0);
+			}
+			&::after {
+				transform: skew(40deg, 0) translate(-47%, 0);
+			}
+		}
+		&__body {
+			gap: 48px;
+		}
+	}
+
+	@media (max-width: 900px) {
+		&__body {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 765px) {
+		&__header {
+			background: none;
+			margin: 0;
+			padding: 0;
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+		&__body {
+			padding: 48px 0 72px 0;
+			gap: 38px;
+		}
+		&__title {
+			color: var(--text-color-main);
+			br {
+				display: none;
+			}
+		}
+	}
+}

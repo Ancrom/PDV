@@ -1,0 +1,91 @@
+/* =============== VOTE =============== */
+
+.vote {
+	max-width: 690px;
+	margin: 0 140px 0 0;
+	&__btn {
+		display: flex;
+		position: relative;
+		padding: 40px 125px 48px 40px;
+		box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
+		border-radius: 10px;
+		background: url(./../img/profession/triangle.svg) calc(100% + 1px) calc(100% + 1px) no-repeat, #ffffff;
+		border: 1px solid transparent;
+		transition: 0.3s ease;
+		&:not(:last-child) {
+			margin: 0 0 18px 0;
+		}
+		&:hover {
+			border: 1px solid #0b7572;
+			.vote__fake {
+				border: 1px solid #00000079;
+			}
+		}
+	}
+	&__input {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+		&:checked ~ .vote__fake::after {
+			display: block;
+		}
+		&:active ~ .vote__fake {
+			background: #0b75723a;
+		}
+		&:focus ~ .vote__fake {
+			border: 1px solid #828285;
+		}
+	}
+	&__fake {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 auto;
+		margin: 5px 32px 0 0;
+		width: 24px;
+		height: 24px;
+		border: 1px solid #cbcbcd;
+		border-radius: 50%;
+		box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2);
+		transition: 0.3s ease;
+		&::after {
+			content: "";
+			display: none;
+			width: 10px;
+			height: 10px;
+			background: #0b7572;
+			border-radius: 50%;
+		}
+	}
+	&__title {
+		font-weight: 600;
+		font-size: 20px;
+		margin: 0 0 24px 0;
+	}
+
+	@media (max-width: 1160px) {
+		margin: 0 40px 0 0;
+	}
+
+	@media (max-width: 1050px) {
+		margin: 0;
+		max-width: 100%;
+	}
+
+	@media (max-width: 700px) {
+		&__btn {
+			padding: 28px 17px 32px;
+			background: #ffffff;
+		}
+		&__fake {
+			margin: 5px 16px 0 0;
+		}
+		&__title {
+			font-size: 18px;
+			margin: 0 0 16px 0;
+		}
+		&__text {
+			font-size: 14px;
+		}
+	}
+}

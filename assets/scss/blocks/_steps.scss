@@ -1,0 +1,25 @@
+/* =============== STEPS =============== */
+
+.steps {
+	padding: 120px 0;
+	&__title {
+		margin: 0 0 48px 0;
+	}
+	&__body {
+		padding: 0 8px 0 50px;
+	}
+	
+	@media (max-width: 769px) {
+		padding: 88px 0;
+		&__body {
+			padding: 0 8px 0 38px;
+		}
+	}
+
+	@media (max-width: 701px) {
+		padding: 64px 0;
+		&__body {
+			padding: 0 6px 0 33px;
+		}
+	}
+}

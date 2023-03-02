@@ -1,0 +1,33 @@
+/* =============== CLIENTS =============== */
+
+.clients {
+	&__container {
+		background: no-repeat url(./../img/clients/clients-bg.png) 27px 0, var(--accent-color-main);
+		padding: 85px 67px 81px;
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row wrap;
+	}
+	&__header {
+		margin: 0 25px 48px 0;
+	}
+
+	@media (max-width: 769px) {
+		&__container {
+			padding: 64px 39px;
+			background: no-repeat url(./../img/clients/clients-bg.png) 40px -40px / 536px, var(--accent-color-main);
+		}
+	}
+	
+	@media (max-width: 721px) {
+		&__container {
+			padding: 32px 17px;
+		}
+		&__header {
+			margin: 0 0 40px 0;
+			br {
+				display: none;
+			}
+		}
+	}
+}

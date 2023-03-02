@@ -1,0 +1,24 @@
+/* =============== SERVICES =============== */
+
+.services {
+	margin: -105px 0 0 0;
+	&__body {
+		display: flex;
+		border-radius: 20px;
+		overflow: hidden;
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+	}
+
+	@media (max-width: 1320px) {
+		margin: 40px 0 0 0;
+		&__body {
+			flex-flow: column nowrap;
+			box-shadow: none;
+		}
+	}
+
+	@media (max-width: 700px) {
+		margin: -125px 0 0 0;
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+	}
+}
