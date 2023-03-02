@@ -5,7 +5,7 @@ function playVideo() {
   const videoBtn = document.querySelector(".video__button");
   videoBtn.addEventListener("click", () => {
     videoFile.play();
-    videoOverlay.style.display= "none";
+    videoOverlay.style.display = "none";
   });
 }
 playVideo();
