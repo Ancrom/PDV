@@ -1,5 +1,5 @@
 // =============== Play video ===============
-function playVideo() {
+(function playVideo() {
   const videoFile = document.querySelector(".video__file");
   const videoOverlay = document.querySelector(".video__overlay");
   const videoBtn = document.querySelector(".video__button");
@@ -7,8 +7,8 @@ function playVideo() {
     videoFile.play();
     videoOverlay.style.display = "none";
   });
-}
-playVideo();
+})()
+
 
 // =============== Slider ===============
 const swiper = new Swiper(".swiper1", {
